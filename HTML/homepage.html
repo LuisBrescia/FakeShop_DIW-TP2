@@ -13,7 +13,7 @@
 
 <body data-bs-theme="dark">
     <!-- * Navbar -->
-    <nav class="row mx-auto navbar navbar-expand-md bg-fundo shadow mb-2 pb-3" data-bs-theme="dark">
+    <nav class="row mx-auto navbar navbar-expand-md bg-fundo shadow mb-3 pb-3" data-bs-theme="dark">
         <div class="container-fluid">
             <!-- * Logo -->
             <img class="mx-auto" src="../SRC/GeneralMills.png" style="height: 80px; width: 160px; filter: invert(1);"
@@ -22,10 +22,10 @@
             <div class="d-flex my-3 d-md-none w-100 gap-2">
                 <div class="input-group shadow border border-1 border-light overflow-hidden">
                     <input
-                        class="border-0 d-sm-inline-block d-md-none d-lg-inline-block form-control border-dark rounded-0 shadow-none"
+                        class="border-0 d-sm-inline-block d-md-none d-lg-inline-block form-control bg-escuro rounded-0 shadow-none"
                         type="search" placeholder="Search for a product, Category, Sellers or Brand"
                         aria-label="Search">
-                    <input class="d-sm-none d-md-inline-block d-lg-none form-control border-dark rounded-0"
+                    <input class="d-sm-none d-md-inline-block d-lg-none form-control rounded-0"
                         type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light input-group-text bi-search border border-0 rounded-0">
                         Search</button>
@@ -43,14 +43,14 @@
                 <!-- ? Lado Esquerdo-->
                 <div class="col-5 d-flex align-items-stretch">
                     <div class="d-none d-md-flex flex-column collapse mt-3 mt-md-0 ms-md-3 gap-3 w-100 mx-sm-auto">
-                        <p class="m-0 ps-1 text-white fw-lighter">Welcome Guest!</p>
+                        <p class="m-0 ps-1 text-claro fw-lighter">Welcome Guest!</p>
                         <div class="input-group shadow border border-1 border-light overflow-hidden">
                             <input
-                                class="border-0 d-sm-inline-block d-md-none d-lg-inline-block form-control border-dark rounded-0 shadow-none"
+                                class="border-0 d-sm-inline-block d-md-none d-lg-inline-block form-control bg-escuro shadow-none"
                                 type="search" placeholder="Search for a product, Category, Sellers or Brand"
                                 aria-label="Search">
                             <input
-                                class="d-sm-none d-md-inline-block d-lg-none form-control border-dark rounded-0 shadow-none"
+                                class="d-sm-none d-md-inline-block d-lg-none form-control rounded-0 shadow-none"
                                 type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-light input-group-text bi-search border border-0 rounded-0">
                                 Search</button>
@@ -70,7 +70,7 @@
                     <li class="nav-item text-link fw-bold d-none d-md-inline ">|</li>
                     <li class="nav-item text-link fw-bold"><a href="#">Track order</a></li>
                 </ul>
-                <div class="ms-3 align-self-end d-none d-md-flex flex-column text-white">
+                <div class="ms-3 align-self-end d-none d-md-flex flex-column text-claro">
                     <p class="m-0 p-0 fw-lighter align-self-start">Cash on delivery 30 days return</p>
                     <p class="m-0 p-0 align-self-end">
                         <span class="fw-lighter">24/7 costumer service</span>
@@ -97,26 +97,25 @@
     <!-- * Main -->
     <main>
         <!-- * Form e Carousel -->
-        <div class="row gap-2 mb-2 mx-2">
+        <div class="row gap-2 mx-3 mb-3">
             <!-- ! Form -->
-            <div class="col-12 col-md-4 d-inline-block shadow p-3 bg-fundo text-light rounded-1"
-                data-bs-theme="dark">
+            <div class="col-12 col-md-4 d-inline-block shadow p-3 bg-fundo text-light rounded-1">
                 <span class="fw-bolder fs-5">Quick Find - Choose product</span>
                 <p>Find the right product at the right price</p>
 
-                <select class="form-select mb-3 border-0">
+                <select class="form-select mb-3 border-0 bg-escuro">
                     <option selected>Type</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
-                <select class="form-select mb-3 border-0">
+                <select class="form-select mb-3 border-0 bg-escuro">
                     <option selected>Brand</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
-                <select class="form-select mb-3 border-0">
+                <select class="form-select mb-3 border-0 bg-escuro">
                     <option selected>Category</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -124,12 +123,12 @@
                 </select>
                 <div class="d-flex gap-3">
                     <div class="input-group mb-3">
-                        <span class="input-group-text text-white border-white">$</span>
-                        <input type="text" class="form-control border-white" placeholder="From">
+                        <span class="input-group-text text-claro bg-fundo border-claro">$</span>
+                        <input type="text" class="form-control border-claro bg-escuro text-claro" placeholder="From">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text text-white border-white">$</span>
-                        <input type="text" class="form-control border-white" placeholder="To">
+                        <span class="input-group-text text-claro bg-fundo border-claro">$</span>
+                        <input type="text" class="form-control border-claro bg-escuro" placeholder="To">
                     </div>
                 </div>
 
@@ -139,7 +138,7 @@
             </div>
             <!-- ! Carousel -->
             <div id="carouselExampleIndicators"
-                class="col fs-1 d-flex shadow bg-fundo text-white rounded-1 carousel slide"
+                class="col fs-1 d-flex shadow bg-fundo text-claro rounded-1 carousel slide"
                 data-bs-theme="dark">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -173,13 +172,13 @@
             </div>
         </div>
         <!-- * Produtos | Most reviewed items e Newsletter -->
-        <div class="row gap-2 mb-2 mx-2">
+        <div class="row gap-3 mx-3 mb-3">
             <!-- ! Produtos -->
             <div class="col col-lg-8 p-0 d-inline-block">
                 <!-- * Linha -->
-                <div class="row m-0 p-0 flex-column flex-md-row justify-content-between">
+                <div class="row m-0 p-0 flex-column mb-md-3 flex-md-row justify-content-between">
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 mb-2 mb-md-0"
                         data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 1.jpg" class="imgProduto">
@@ -205,7 +204,7 @@
                         </div>
                     </div>
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 mb-2 mb-md-0"
                         data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 2.jpg" class="imgProduto">
@@ -231,7 +230,7 @@
                         </div>
                     </div>
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto" data-bs-theme="dark">
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3" data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 3.jpg" class="imgProduto">
                         </div>
@@ -257,9 +256,9 @@
                     </div>
                 </div>
                 <!-- * Linha -->
-                <div class="row m-0 p-0 justify-content-between my-2">
+                <div class="row m-0 p-0 justify-content-between mb-md-3">
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0" data-bs-theme="dark">
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 mb-2 mb-md-0" data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 4.jpg" class="imgProduto">
                         </div>
@@ -284,7 +283,7 @@
                         </div>
                     </div>
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 mb-2 mb-md-0"
                         data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 5.jpg" class="imgProduto">
@@ -310,7 +309,7 @@
                         </div>
                     </div>
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto " data-bs-theme="dark">
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 " data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 6.jpg" class="imgProduto">
                         </div>
@@ -338,7 +337,7 @@
                 <!-- * Linha -->
                 <div class="row m-0 p-0 justify-content-between">
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 mb-2 mb-md-0"
                         data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 1.jpg" class="imgProduto">
@@ -364,7 +363,7 @@
                         </div>
                     </div>
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3 mb-2 mb-md-0"
                         data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 2.jpg" class="imgProduto">
@@ -390,7 +389,7 @@
                         </div>
                     </div>
                     <!-- ? Card Bootstrap -->
-                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto" data-bs-theme="dark">
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto pb-3" data-bs-theme="dark">
                         <div class="card-header border-0 mt-3">
                             <img src="../SRC/Headset Gamer 3.jpg" class="imgProduto">
                         </div>
@@ -419,7 +418,7 @@
             <!-- ! Most Reviewed Items e NewsLetter-->
             <div class="col-lg p-0 m-0 d-flex flex-column justify-content-between">
                 <!-- * Most reviewed items -->
-                <div class="mostReviewed row bg-fundo rounded-1 p-0 m-0 mb-2 border-0" data-bs-theme="dark">
+                <div class="mostReviewed row bg-fundo rounded-1 p-0 m-0 mb-3 border-0" data-bs-theme="dark">
                     <div class="d-flex flex-column justify-content-between h-100">
                         <div>
                             <h1 class="fs-4 fw-bolder text-light my-3">Most Reviewed Items</h1>
@@ -542,10 +541,10 @@
                 </div>
                 <!-- * Newsletter -->
                 <div class="row bg-fundo rounded-1 p-0 m-0 border-0" data-bs-theme="dark">
-                    <div class="text-white">
+                    <div class="text-claro">
                         <h1 class="fs-4 fw-bolder mt-3 mb-0">Newsletter</h1>
                         <p class="fs-5 fw-lighter">Signup for newsletter!</p>
-                        <input class="form-control border-dark rounded-0 shadow-none" type="search"
+                        <input class="form-control border-dark rounded-0 shadow-none bg-escuro" type="search"
                             placeholder="email@example.com">
                     </div>
                     <!-- ? Só o button -->
@@ -559,7 +558,7 @@
         </div>
     </main>
     <!-- * Footer -->
-    <footer class="bg-fundo text-white" data-bs-theme="dark">
+    <footer class="bg-fundo text-claro" data-bs-theme="dark">
         <div class="m-0 pb-3 pt-5 d-flex flex-column flex-lg-row justify-content-center  gap-5 mx-3">
             <!-- ? Métodos de Pagamento -->
             <div class="col">
@@ -609,7 +608,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-dark text-center m-0 p-2">
+        <div class="row bg-escuro text-center m-0 p-2">
             <p class="m-0">© 2007-2014 &nbsp company.com</p>
         </div>
     </footer>
