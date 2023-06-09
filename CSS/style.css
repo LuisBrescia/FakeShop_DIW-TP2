@@ -11,7 +11,7 @@
   --estrelas: #FFC107;
 
   --clara: aliceblue;
-  --escura: #161829;
+  --escura: #1b1e31;
 
 }
 
@@ -39,7 +39,7 @@ ul {list-style: none; padding: 0; margin: 0;}
 .card {width: 32%;}
 .imgProduto {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
   object-fit: fill;
   /* mix-blend-mode: multiply; */
   filter: contrast(2);
