@@ -1,0 +1,65 @@
+/** Geral */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --fundo: #2b3035;   /* bg-body-tertiary bs5 */
+  --link: #0DCAF0;    /* text-info bs5 */
+  -estrelas: #FFC107; /* text-warning bs5 */
+
+  --fundo: #272f37; 
+  --link: #0DCAF0; 
+  --estrelas: #ff9807;
+
+  --clara: #fafafa;
+  --escura: #0f0f0f;
+}
+
+body {font-family: Montserrat, sans-serif; background-color: var(--clara);}
+a {text-decoration: none; color: inherit;}
+a:hover {text-decoration:underline;}
+ul {list-style: none; padding: 0; margin: 0;}
+
+.bg-fundo {background-color: var(--fundo);}
+.text-link {color: var(--link);}
+.estrelas {color: var(--estrelas);}
+/* .pesquisar {background-color: var(--clara) !important; color: var(--escura) !important; border: none !important;} */
+
+/** Carousel */
+.carouselImg {max-height: 320px; height: 100%; object-fit: cover;}
+
+/** Produtos */
+.card {width: 33%;}
+.imgProduto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: fill;
+  /* mix-blend-mode: multiply; */
+  filter: contrast(2);
+}
+
+/** Itens em destaque */
+.mostReviewed {flex-grow: 1;}
+
+.card-heder {
+  height: 200px;
+  overflow: hidden;
+}
+/** Footer */
+.metodosPagamento {width: 45px; height: 30px;}
+
+/** Media Queries*/
+@media screen and (max-width: 576px) {
+  .pesquisar{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .position-md-absolute {
+    position: absolute;
+  }
+}

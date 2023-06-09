@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body data-bs-theme="dark">
+    <!-- * Navbar -->
+    <nav class="row mx-auto navbar navbar-expand-md bg-fundo shadow mb-2 pb-3" data-bs-theme="dark">
+        <div class="container-fluid">
+            <!-- * Logo -->
+            <img class="mx-auto" src="../SRC/GeneralMills.png" style="height: 80px; width: 160px; filter: invert(1);"
+                alt="">
+            <!-- * Barra de pesquisa em tela pequena -->
+            <div class="d-flex my-3 d-md-none w-100 gap-2">
+                <div class="input-group shadow border border-1 border-light overflow-hidden">
+                    <input
+                        class="border-0 d-sm-inline-block d-md-none d-lg-inline-block form-control border-dark rounded-0 shadow-none"
+                        type="search" placeholder="Search for a product, Category, Sellers or Brand"
+                        aria-label="Search">
+                    <input class="d-sm-none d-md-inline-block d-lg-none form-control border-dark rounded-0"
+                        type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light input-group-text bi-search border border-0 rounded-0">
+                        Search</button>
+                </div>
+                <button type="button" class="btn btn-outline-light position-relative rounded-0 shadow px-3 py-2">
+                    <i class="bi-cart4 fs-6"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+            </div>
+            <!-- * Barra de pesquisa em tela grande -->
+            <div class="collapse navbar-collapse" id="itensLogin">
+                <!-- ? Lado Esquerdo-->
+                <div class="col-5 d-flex align-items-stretch">
+                    <div class="d-none d-md-flex flex-column collapse mt-3 mt-md-0 ms-md-3 gap-3 w-100 mx-sm-auto">
+                        <p class="m-0 ps-1 text-white fw-lighter">Welcome Guest!</p>
+                        <div class="input-group shadow border border-1 border-light overflow-hidden">
+                            <input
+                                class="border-0 d-sm-inline-block d-md-none d-lg-inline-block form-control border-dark rounded-0 shadow-none"
+                                type="search" placeholder="Search for a product, Category, Sellers or Brand"
+                                aria-label="Search">
+                            <input
+                                class="d-sm-none d-md-inline-block d-lg-none form-control border-dark rounded-0 shadow-none"
+                                type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light input-group-text bi-search border border-0 rounded-0">
+                                Search</button>
+                        </div>
+                    </div>
+                </div>
+                <ul
+                    class="my-4 my-md-0 navbar-nav position-md-absolute gap-3 me-3 text-nowrap align-self-start text-center end-0">
+                    <li class="nav-item text-link fw-bold"><a href="#">Sign in</a></li>
+                    <hr class="text-secondary mx-5 my-0 d-md-none">
+                    <li class="nav-item text-link fw-bold d-none d-md-inline ">|</li>
+                    <li class="nav-item text-link fw-bold"><a href="#">Register</a></li>
+                    <hr class="text-secondary mx-5 my-0 d-md-none">
+                    <li class="nav-item text-link fw-bold d-none d-md-inline ">|</li>
+                    <li class="nav-item text-link fw-bold"><a href="#">My account</a></li>
+                    <hr class="text-secondary mx-5 my-0 d-md-none">
+                    <li class="nav-item text-link fw-bold d-none d-md-inline ">|</li>
+                    <li class="nav-item text-link fw-bold"><a href="#">Track order</a></li>
+                </ul>
+                <div class="ms-3 align-self-end d-none d-md-flex flex-column text-white">
+                    <p class="m-0 p-0 fw-lighter align-self-start">Cash on delivery 30 days return</p>
+                    <p class="m-0 p-0 align-self-end">
+                        <span class="fw-lighter">24/7 costumer service</span>
+                        <span class="fw-bolder">1800 00 11 22</span>
+                    </p>
+                </div>
+                <button type="button"
+                    class="d-none me-2 btn btn-outline-light position-relative ms-auto align-self-end d-md-block rounded-0 shadow">
+                    <i class="bi-cart4 fs-6"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+            </div>
+            <!-- * Botão de menu -->
+            <button
+                class="border border-1 border-light rounded-0 btn btn-outline-light shadow navbar-toggler bi-list fs-1 py-2 w-100"
+                type="button" data-bs-toggle="collapse" data-bs-target="#itensLogin" aria-expanded="false"
+                aria-label="Toggle navigation">
+            </button>
+        </div>
+    </nav>
+    <!-- * Main -->
+    <main>
+        <!-- * Form e Carousel -->
+        <div class="row gap-2 mb-2 mx-2">
+            <!-- ! Form -->
+            <div class="col-12 col-md-4 d-inline-block shadow p-3 bg-fundo text-light rounded-1"
+                data-bs-theme="dark">
+                <span class="fw-bolder fs-5">Quick Find - Choose product</span>
+                <p>Find the right product at the right price</p>
+
+                <select class="form-select mb-3 border-0">
+                    <option selected>Type</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <select class="form-select mb-3 border-0">
+                    <option selected>Brand</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <select class="form-select mb-3 border-0">
+                    <option selected>Category</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="d-flex gap-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text text-white border-white">$</span>
+                        <input type="text" class="form-control border-white" placeholder="From">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text text-white border-white">$</span>
+                        <input type="text" class="form-control border-white" placeholder="To">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-outline-light bi-search w-100 mx-auto rounded-0 shadow fw-bolder">
+                    Search
+                </button>
+            </div>
+            <!-- ! Carousel -->
+            <div id="carouselExampleIndicators"
+                class="col fs-1 d-flex shadow bg-fundo text-white rounded-1 carousel slide"
+                data-bs-theme="dark">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner d-flex align-items-center py-2 py-md-0">
+                    <div class="carousel-item active">
+                        <img src="../SRC/PAYPAL.png" class="carouselImg rounded-1 d-block mx-auto w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../SRC/PAYPAL.png" class="carouselImg rounded-1 d-block mx-auto w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../SRC/PAYPAL.png" class="carouselImg rounded-1 d-block mx-auto w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- * Produtos | Most reviewed items e Newsletter -->
+        <div class="row gap-2 mb-2 mx-2">
+            <!-- ! Produtos -->
+            <div class="col col-lg-8 p-0 d-inline-block">
+                <!-- * Linha -->
+                <div class="row m-0 p-0 flex-column flex-md-row justify-content-between">
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                        data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 1.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                        data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 2.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto" data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 3.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- * Linha -->
+                <div class="row m-0 p-0 justify-content-between my-2">
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0" data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 4.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                        data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 5.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto " data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 6.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- * Linha -->
+                <div class="row m-0 p-0 justify-content-between">
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                        data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 1.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto mb-2 mb-md-0"
+                        data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 2.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ? Card Bootstrap -->
+                    <div class="card bg-fundo border-0 rounded-1 mx-md-0 mx-auto" data-bs-theme="dark">
+                        <div class="card-header border-0 mt-3">
+                            <img src="../SRC/Headset Gamer 3.jpg" class="imgProduto">
+                        </div>
+                        <div class="card-body px-0">
+                            <a class="text-link" href="#">
+                                <p class="fs-5 fw-normal mb-1">Product Description</p>
+                            </a>
+                            <p class="estrelas m-0" style="font-size: smaller;">
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-fill"></i>
+                                <i class="bi-star-half"></i>
+                                <i class="bi-star"></i>
+                                <span class="mx-1 text-light fs-6">(6)</span>
+                            </p>
+                            <p class="fs-5 fw-bolder m-0">
+                                R$ 600,00
+                            </p>
+                            <span class="fst-italic position-absolute bottom-0 end-0 me-3" style="font-size: smaller;">
+                                <s>R$790,00</s> 14% OFF
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ! Most Reviewed Items e NewsLetter-->
+            <div class="col-lg p-0 m-0 d-flex flex-column justify-content-between">
+                <!-- * Most reviewed items -->
+                <div class="mostReviewed row bg-fundo rounded-1 p-0 m-0 mb-2 border-0" data-bs-theme="dark">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <div>
+                            <h1 class="fs-4 fw-bolder text-light my-3">Most Reviewed Items</h1>
+                            <!-- ? Reviewed Item-->
+                            <div class="row m-0 p-0">
+                                <div class="col-4 p-0">
+                                    <img src="../SRC/Headset Gamer 1.jpg" class="mx-auto imgProduto">
+                                </div>
+                                <div class="col text-light ms-1">
+                                    <p class="fs-6 fw-normal mb-1"><a href="#" class="text-link">Product Description</a>
+                                    </p>
+                                    <p class="estrelas m-0" style="font-size: smaller;">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-half"></i>
+                                        <i class="bi-star"></i>
+                                        <span class="mx-1 text-light fs-6">(6)</span>
+                                    </p>
+                                    <p class="fs-6 fw-bolder m-0">
+                                        R$ 600,00
+                                    </p>
+                                </div>
+                            </div>
+                            <hr class="text-secondary opacity-25">
+                            <!-- ? Reviewed Item-->
+                            <div class="row m-0 p-0">
+                                <div class="col-4 p-0">
+                                    <img src="../SRC/Headset Gamer 1.jpg" class="mx-auto imgProduto">
+                                </div>
+                                <div class="col text-light ms-1">
+                                    <p class="fs-6 fw-normal mb-1"><a href="#" class="text-link">Product Description</a>
+                                    </p>
+                                    <p class="estrelas m-0" style="font-size: smaller;">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-half"></i>
+                                        <i class="bi-star"></i>
+                                        <span class="mx-1 text-light fs-6">(6)</span>
+                                    </p>
+                                    <p class="fs-6 fw-bolder m-0">
+                                        R$ 600,00
+                                    </p>
+                                </div>
+                            </div>
+                            <hr class="text-secondary opacity-25">
+                            <!-- ? Reviewed Item-->
+                            <div class="row m-0 p-0">
+                                <div class="col-4 p-0">
+                                    <img src="../SRC/Headset Gamer 1.jpg" class="mx-auto imgProduto">
+                                </div>
+                                <div class="col text-light ms-1">
+                                    <p class="fs-6 fw-normal mb-1"><a href="#" class="text-link">Product Description</a>
+                                    </p>
+                                    <p class="estrelas m-0" style="font-size: smaller;">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-half"></i>
+                                        <i class="bi-star"></i>
+                                        <span class="mx-1 text-light fs-6">(6)</span>
+                                    </p>
+                                    <p class="fs-6 fw-bolder m-0">
+                                        R$ 600,00
+                                    </p>
+                                </div>
+                            </div>
+                            <hr class="text-secondary opacity-25">
+                            <!-- ? Reviewed Item-->
+                            <div class="row m-0 p-0">
+                                <div class="col-4 p-0">
+                                    <img src="../SRC/Headset Gamer 1.jpg" class="mx-auto imgProduto">
+                                </div>
+                                <div class="col text-light ms-1">
+                                    <p class="fs-6 fw-normal mb-1"><a href="#" class="text-link">Product Description</a>
+                                    </p>
+                                    <p class="estrelas m-0" style="font-size: smaller;">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-half"></i>
+                                        <i class="bi-star"></i>
+                                        <span class="mx-1 text-light fs-6">(6)</span>
+                                    </p>
+                                    <p class="fs-6 fw-bolder m-0">
+                                        R$ 600,00
+                                    </p>
+                                </div>
+                            </div>
+                            <hr class="text-secondary opacity-25">
+                            <!-- ? Reviewed Item-->
+                            <div class="row m-0 p-0">
+                                <div class="col-4 p-0">
+                                    <img src="../SRC/Headset Gamer 1.jpg" class="mx-auto imgProduto">
+                                </div>
+                                <div class="col text-light ms-1">
+                                    <p class="fs-6 fw-normal mb-1"><a href="#" class="text-link">Product Description</a>
+                                    </p>
+                                    <p class="estrelas m-0" style="font-size: smaller;">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-half"></i>
+                                        <i class="bi-star"></i>
+                                        <span class="mx-1 text-light fs-6">(6)</span>
+                                    </p>
+                                    <p class="fs-6 fw-bolder m-0">
+                                        R$ 600,00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end bottom-0">
+                            <button class="btn btn-outline-light rounded-0 w-50 my-3">
+                                See More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- * Newsletter -->
+                <div class="row bg-fundo rounded-1 p-0 m-0 border-0" data-bs-theme="dark">
+                    <div class="text-white">
+                        <h1 class="fs-4 fw-bolder mt-3 mb-0">Newsletter</h1>
+                        <p class="fs-5 fw-lighter">Signup for newsletter!</p>
+                        <input class="form-control border-dark rounded-0 shadow-none" type="search"
+                            placeholder="email@example.com">
+                    </div>
+                    <!-- ? Só o button -->
+                    <div class="d-flex justify-content-end bottom-0">
+                        <button class="btn btn-outline-light rounded-0 w-50 my-3">
+                            Join Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- * Footer -->
+    <footer class="bg-fundo text-white" data-bs-theme="dark">
+        <div class="m-0 pb-3 pt-5 d-flex flex-column flex-lg-row justify-content-center  gap-5 mx-3">
+            <!-- ? Métodos de Pagamento -->
+            <div class="col">
+                <h4 class="fw-bolder">Payment Methods</h4>
+                <ul>
+                    <li class="d-flex gap-2">
+                        <a href="#"><img src="../SRC/VISA.png" alt="VISA CARD" class="metodosPagamento"></a>
+                        <a href="#"><img src="../SRC/MASTERCARD.png" alt="MASTERCARD" class="metodosPagamento"></a>
+                        <a href="#"><img src="../SRC/PAYPAL.png" alt="PayPal" class="metodosPagamento"></a>
+                        <a href="#"><img src="../SRC/Pix.png" alt="Pix" class="metodosPagamento"></a>
+                        <a href="#"><img src="../SRC/CashDelivery.png" alt="Cash on Delivery"
+                                class="metodosPagamento"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- ? Links -->
+            <div class="col">
+                <h4 class="fw-bolder">Quick Links</h4>
+                <ul class="text-link">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li class="text-nowrap"><a href="#">Cancelation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Police</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+            <!-- ? Redes Social -->
+            <div class="col">
+                <h4 class="fw-bolder">Lets be social</h4>
+                <div class="d-flex gap-3">
+                    <a href="#"><i class="fs-2 bi-facebook"></i></a>
+                    <a href="#"><i class="fs-2 bi-instagram"></i></a>
+                    <a href="#"><i class="fs-2 bi-twitter"></i></a>
+                </div>
+            </div>
+            <!-- ? Contato -->
+            <div class="col">
+                <h4 class="fw-bolder">Contact us</h4>
+                <ul>
+                    <li>Adress line one</li>
+                    <li>Street N°</li>
+                    <li>Place</li>
+                    <li class="text-nowrap"><i class="bi-envelope"></i><a class="text-link" href="#">&nbsp
+                            info@generalmills.com</a></li>
+                    <li><i class="bi-telephone"></i><span class="fs-5 fw-bolder">&nbsp1800 4400 22</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row bg-dark text-center m-0 p-2">
+            <p class="m-0">© 2007-2014 &nbsp company.com</p>
+        </div>
+    </footer>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
