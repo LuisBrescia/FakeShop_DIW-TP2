@@ -1,4 +1,52 @@
-fetch('https://fakestoreapi.com/products').then(res => res.json()).then(function (listaProdutos) {
+const urlParams = new URLSearchParams(window.location.search);
+const pesquisaRealizada = urlParams.get('pesquisa');
+const pesquisaCategoria = urlParams.get('categoria');
+
+$('#pesquisa').val(pesquisaRealizada);
+var urlPesquisa = 'https://fakestoreapi.com/products/';
+
+// Caso essa string tenha a palavra man, mudar a url para https://fakestoreapi.com/products/category/men'%20clothing
+// 'https://fakestoreapi.com/products/category/men\'%20clothing'
+console.log(pesquisaRealizada);
+
+switch (pesquisaCategoria) {
+    case 'homens':
+        urlPesquisa = 'https://fakestoreapi.com/products/category/men\'s%20clothing';
+        $('#pesquisaRealizada').append(' para categoria Men\'s clothing');
+        break;
+    case 'mulheres':
+        urlPesquisa = 'https://fakestoreapi.com/products/category/women\'s%20clothing';
+        $('#pesquisaRealizada').append(' para categoria Women\'s clothing');
+        break;
+    case 'joias':
+        urlPesquisa = 'https://fakestoreapi.com/products/category/jewelery';
+        $('#pesquisaRealizada').append(' para categoria Jewelery');
+        break;
+    case 'eletronicos':
+        urlPesquisa = 'https://fakestoreapi.com/products/category/electronics';
+        $('#pesquisaRealizada').append(' para categoria Electronics');
+        break;
+    case 'todos':
+        urlPesquisa = 'https://fakestoreapi.com/products/';
+        $('#pesquisaRealizada').append(' para todos os produtos');
+        break;
+    default:
+        urlPesquisa = 'https://fakestoreapi.com/products/';
+        break;
+}
+
+if (pesquisaRealizada != '' && pesquisaRealizada != null) {
+    $('#pesquisaRealizada').append('"' + pesquisaRealizada + '"');
+    $('section small').toggleClass('d-none');
+    $('#pesquisaAviso').append("Se não apareceu nada é porque a API é mal feita mesmo");
+    urlPesquisa = `https://fakestoreapi.com/products/search?query=${pesquisaRealizada}`;
+    console.log(urlPesquisa);
+    console.log("oi");
+} else if (pesquisaCategoria == '') {
+    $('#pesquisaRealizada').append('todos os produtos');
+}
+
+fetch(urlPesquisa).then(res => res.json()).then(function (listaProdutos) {
     // Para cada item de data
     for (let i = 0; i < listaProdutos.length; i++) {
 
@@ -20,7 +68,7 @@ fetch('https://fakestoreapi.com/products').then(res => res.json()).then(function
         <a class="ref-product" href="detalhes.html?id=${listaProdutos[i].id}">
             <!-- ? Card-header -->
             <div class="ref-media">
-                <img class="ref-image" src="${listaProdutos[i].image}" loading="lazy" style="object-fit: cover;"/>
+                <img class="ref-image rounded-3 c-shadow" src="${listaProdutos[i].image}" loading="lazy" style="object-fit: cover;"/>
                 <div class="ref-sale-badge">R$ ${listaProdutos[i].price}</div>
             </div>
             <!-- ? Card-body -->
@@ -31,7 +79,7 @@ fetch('https://fakestoreapi.com/products').then(res => res.json()).then(function
                 </div>
                 
             </div>
-            <button class="ref-button preview-toggle border-0 align-self-start" href="#">Ver detalhes</button>
+            <button class="ref-button preview-toggle border-0 align-self-start bg-primary" href="#">Ver detalhes</button>
         </a>
         `);
         // Adiciona o produto na lista
@@ -39,7 +87,3 @@ fetch('https://fakestoreapi.com/products').then(res => res.json()).then(function
     }
 });
 
-
-{/* <strong class="ref-price ref-on-sale">
-    R$${listaProdutos[i].price}
-</strong> */}
